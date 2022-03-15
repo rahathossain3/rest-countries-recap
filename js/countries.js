@@ -9,8 +9,11 @@ const loadCountries = () => {
 const displayCountries = countries => {
     console.log(countries);
     const countryHTML = countries.map(country => getContryElement(country));
+    const container = document.getElementById('countries');
+    container.innerHTML = countryHTML;
 
-    console.log(countryHTML)
+
+    // console.log(countryHTML)
 }
 
 const getContryElement = country => {
